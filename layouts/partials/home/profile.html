@@ -80,7 +80,7 @@
       <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4">{{ .Description }}</p>
       <div class="flex flex-wrap gap-1">
         {{ range first 3 .Params.tags }}
-        <span class="text-xs px-2 py-0.5 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300">{{ . }}</span>
+        <span class="text-xs px-2 py-1 rounded-full border border-primary-400 dark:border-primary-500 text-primary-700 dark:text-primary-200 font-medium">{{ . }}</span>
         {{ end }}
       </div>
     </a>

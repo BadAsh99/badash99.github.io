@@ -1,0 +1,106 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+
+{{/* ── HERO / PROFILE ── */}}
+<article class="{{ if not .Site.Params.homepage.showRecent }}h-full{{ end }} flex flex-col items-center justify-center text-center">
+  <header class="relative px-1 py-1 flex flex-col items-center mb-3">
+    {{ with .Site.Params.Author.image }}
+      {{ $authorImage := "" }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ $authorImage = resources.GetRemote . }}
+      {{ else }}
+        {{ $authorImage = resources.Get . }}
+      {{ end }}
+      {{ if $authorImage }}
+        {{ $final := $authorImage }}
+        {{ $squareImage := $authorImage }}
+        {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
+          {{ $final = $authorImage.Fill (print "288x288 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+          {{ $shortSide := int (math.Min $authorImage.Width $authorImage.Height) }}
+          {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide) }}
+        {{ end }}
+        <img class="mb-2 h-36 w-36 rounded-full" width="144" height="144"
+          alt="{{ $.Site.Params.Author.name | default `Author` }}"
+          src="{{ $final.RelPermalink }}"
+          data-zoom-src="{{ $squareImage.RelPermalink }}">
+      {{ end }}
+    {{ end }}
+    <h1 class="text-4xl font-extrabold">{{ .Site.Params.Author.name | default .Site.Title }}</h1>
+    {{ with .Site.Params.Author.headline }}
+      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">{{ . | markdownify }}</h2>
+    {{ end }}
+    <div class="mt-1 text-2xl">{{ partialCached "author-links.html" . }}</div>
+  </header>
+  <section class="prose dark:prose-invert w-full">{{ .Content }}</section>
+</article>
+
+{{/* ── WHAT'S IN THE LAB ── */}}
+<section class="mt-12 mb-8">
+  <h2 class="text-2xl font-bold text-center mb-6 text-neutral-800 dark:text-neutral-100">What's In The Lab</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    {{ $stacks := slice
+      (dict "label" "AI Runtime Security" "items" (slice "Prompt Injection" "Cross-App Chains" "LLM Red Team" "AIRS Alignment"))
+      (dict "label" "LLM Vuln Scanning" "items" (slice "OWASP LLM Top 10" "Semantic Detection" "Claude + GPT-4" "GCP Cloud Run"))
+      (dict "label" "Cloud Security" "items" (slice "Azure CIS Benchmarks" "NSG / IAM / KV" "Terraform Remediation" "AWS/GCP in progress"))
+      (dict "label" "SASE & PAN-OS" "items" (slice "Prisma Access" "Firewise AI" "Config Auditing" "NL Posture Q&A"))
+    }}
+    {{ range $stacks }}
+    <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-4">
+      <h3 class="text-sm font-bold text-primary-600 dark:text-primary-400 mb-3 uppercase tracking-wide">{{ .label }}</h3>
+      <ul class="space-y-1">
+        {{ range .items }}
+        <li class="text-xs text-neutral-600 dark:text-neutral-400">{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{/* ── FEATURED CONTENT ── */}}
+{{ $featured := where .Site.RegularPages "Params.featured" true }}
+{{ if $featured }}
+<section class="mt-12 mb-8">
+  <h2 class="text-2xl font-bold text-center mb-2 text-neutral-800 dark:text-neutral-100">Featured Projects</h2>
+  <p class="text-center text-neutral-500 dark:text-neutral-400 mb-8 text-sm">The work behind the Wednesday posts.</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+    {{ range $featured }}
+    <a href="{{ .Params.externalUrl | default .RelPermalink }}" {{ if .Params.externalUrl }}target="_blank" rel="noopener"{{ end }}
+       class="group block rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 p-6 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+      <h3 class="font-bold text-lg mb-2 text-neutral-900 dark:text-neutral-100 group-hover:text-primary-600 dark:group-hover:text-primary-400">
+        {{ .Title }}
+      </h3>
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4">{{ .Description }}</p>
+      <div class="flex flex-wrap gap-1">
+        {{ range first 3 .Params.tags }}
+        <span class="text-xs px-2 py-0.5 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300">{{ . }}</span>
+        {{ end }}
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{/* ── EXPLORE BY INTEREST ── */}}
+<section class="mt-12 mb-12">
+  <h2 class="text-2xl font-bold text-center mb-8 text-neutral-800 dark:text-neutral-100">Explore by Interest</h2>
+  <div class="max-w-2xl mx-auto space-y-4">
+    {{ $explores := slice
+      (dict "label" "I want to understand AI runtime enforcement →" "desc" "How Prisma AIRS works, what it's defending against, and why Deny All policies collapse under operational pressure." "url" "/tags/airs/")
+      (dict "label" "I want to see LLM red teaming in practice →" "desc" "Attack chain mapping, prompt injection research, semantic vulnerability detection — running code, not concept decks." "url" "/tags/red-teaming/")
+      (dict "label" "I want to audit cloud security posture →" "desc" "CIS Benchmark scanning, IAM misconfiguration detection, and IaC remediation blocks for Azure, AWS, and GCP." "url" "/tags/cloud-security/")
+      (dict "label" "I want to follow the BadAsh Wednesday series →" "desc" "Weekly posts tracking the pivot from manual SASE to agentic AI security workflows. Every Wednesday. No fluff." "url" "/badashwednesdays/")
+    }}
+    {{ range $explores }}
+    <a href="{{ .url }}" class="group block rounded-xl border border-neutral-200 dark:border-neutral-700 p-4 hover:border-primary-500 dark:hover:border-primary-400 transition-colors">
+      <div class="font-semibold text-primary-600 dark:text-primary-400 group-hover:underline mb-1">{{ .label }}</div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">{{ .desc }}</div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+{{/* ── RECENT ── */}}
+<section>
+  {{ partial "recent-articles/main.html" . }}
+</section>

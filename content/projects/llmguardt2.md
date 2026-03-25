@@ -3,6 +3,7 @@ title: "LLMGuardT2"
 description: "Enterprise LLM vulnerability scanner with semantic attack detection — catches obfuscated and paraphrased attacks that elude pattern-matching tools."
 tags: ["LLM Security", "OWASP", "Semantic Detection", "Python", "Docker", "GCP"]
 weight: 2
+featured: true
 externalUrl: "https://github.com/BadAsh99/llmguardt2"
 showDate: false
 ---

@@ -3,6 +3,7 @@ title: "badash-killchain"
 description: "LLM attack chain mapping, prompt injection research, and AI red team scenarios — AIRS-aligned threat research lab."
 tags: ["AI Security", "Red Teaming", "LLM", "AIRS", "Prompt Injection"]
 weight: 1
+featured: true
 externalUrl: "https://github.com/BadAsh99/badash-killchain"
 showDate: false
 ---

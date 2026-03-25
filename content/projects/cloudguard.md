@@ -3,6 +3,7 @@ title: "CloudGuard"
 description: "Read-only cloud misconfiguration scanner for Azure, AWS, and GCP — CIS Benchmarks with copy-paste remediation."
 tags: ["Cloud Security", "Azure", "AWS", "GCP", "CIS", "Terraform", "Docker"]
 weight: 3
+featured: true
 externalUrl: "https://github.com/BadAsh99/cloudguard"
 showDate: false
 ---

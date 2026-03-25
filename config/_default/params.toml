@@ -7,6 +7,7 @@ enableCodeCopy = true
 
 [author]
   name = "Ash Clements"
+  image = "images/avatar.png"
   headline = "Sr. SASE & AI Security Consultant — Palo Alto Networks"
   bio = "Building the AI security stack enterprises need before they know they need it. Prisma AIRS practitioner. LLM red teamer. IaC advocate. #BadAshWednesdays every Wednesday."
   links = [

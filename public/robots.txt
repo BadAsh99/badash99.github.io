@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://badash99.github.io/sitemap.xml

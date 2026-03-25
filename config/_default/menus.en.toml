@@ -1,0 +1,24 @@
+[[main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 10
+
+[[main]]
+  name = "BadAshWednesdays"
+  url = "/badashwednesdays/"
+  weight = 20
+
+[[main]]
+  name = "About"
+  url = "/about/"
+  weight = 30
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/BadAsh99"
+  weight = 40
+
+[[main]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/ash-clements-75b62b22/"
+  weight = 50

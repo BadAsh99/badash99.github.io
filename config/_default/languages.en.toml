@@ -1,0 +1,7 @@
+languageName = "English"
+weight = 1
+title = "BadAsh Security Lab"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"

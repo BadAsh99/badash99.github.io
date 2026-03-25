@@ -1,0 +1,10 @@
+baseURL = "https://badash99.github.io/"
+languageCode = "en"
+defaultContentLanguage = "en"
+theme = "blowfish"
+title = "BadAsh Security Lab"
+copyright = "Ash Clements"
+
+enableRobotsTXT = true
+paginate = 10
+summaryLength = 0

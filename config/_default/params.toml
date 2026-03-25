@@ -1,0 +1,46 @@
+colorScheme = "terminal"
+defaultAppearance = "dark"
+autoSwitchAppearance = false
+
+enableSearch = true
+enableCodeCopy = true
+
+# Author
+[author]
+  name = "Ash Clements"
+  headline = "Sr. SASE & AI Security Consultant — Palo Alto Networks"
+  bio = "Building the AI security stack enterprises need before they know they need it. Prisma AIRS practitioner. LLM red teamer. IaC advocate. #BadAshWednesdays every week."
+  links = [
+    { linkedin = "https://www.linkedin.com/in/ash-clements-75b62b22/" },
+    { github = "https://github.com/BadAsh99" },
+  ]
+
+# Homepage layout
+[homepage]
+  layout = "profile"
+  homepageImage = ""
+  showRecent = true
+  showRecentItems = 6
+  showMoreLink = true
+  showMoreLinkDest = "/projects"
+  cardView = true
+  cardViewScreenWidth = false
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showAuthor = true
+  showReadingTime = true
+  showTableOfContents = true
+  showRelatedContent = false
+  relatedContentLimit = 3
+  sharingLinks = ["linkedin", "twitter"]
+
+[list]
+  showCards = true
+  groupByYear = false
+  cardView = true
+
+[sitemap]
+  excludedKinds = []

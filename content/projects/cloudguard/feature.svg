@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E1A"/>
+      <stop offset="100%" style="stop-color:#0A1A0E"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3B82F6" stroke-width="0.3" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left accent — split blue/red for multi-cloud -->
+  <rect x="0" y="0" width="8" height="315" fill="#3B82F6"/>
+  <rect x="0" y="315" width="8" height="315" fill="#EF4444"/>
+
+  <!-- Corner brackets -->
+  <path d="M 60 40 L 60 60 L 40 60" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M 1140 590 L 1140 570 L 1160 570" fill="none" stroke="#3B82F6" stroke-width="2"/>
+
+  <!-- BA99 badge -->
+  <polygon points="1100,50 1150,75 1150,125 1100,150 1050,125 1050,75" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="1100" y="97" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">BA</text>
+  <text x="1100" y="117" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">99</text>
+
+  <!-- Cloud provider pills top right -->
+  <rect x="860" y="200" width="70" height="24" rx="12" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="895" y="217" font-family="monospace" font-size="11" fill="#93C5FD" text-anchor="middle">Azure</text>
+  <rect x="940" y="200" width="60" height="24" rx="12" fill="#1A2A1A" stroke="#4ADE80" stroke-width="1"/>
+  <text x="970" y="217" font-family="monospace" font-size="11" fill="#86EFAC" text-anchor="middle">AWS</text>
+  <rect x="1010" y="200" width="60" height="24" rx="12" fill="#1A1A2A" stroke="#A78BFA" stroke-width="1"/>
+  <text x="1040" y="217" font-family="monospace" font-size="11" fill="#C4B5FD" text-anchor="middle">GCP</text>
+
+  <!-- Category label -->
+  <text x="60" y="220" font-family="monospace" font-size="14" fill="#3B82F6" letter-spacing="4">CLOUD SECURITY · CIS BENCHMARKS · READ-ONLY</text>
+
+  <!-- Title -->
+  <text x="60" y="300" font-family="monospace" font-size="56" font-weight="bold" fill="#F9FAFB">Cloud</text>
+  <text x="60" y="370" font-family="monospace" font-size="56" font-weight="bold" fill="#3B82F6">Guard</text>
+
+  <!-- Descriptor -->
+  <text x="60" y="430" font-family="monospace" font-size="18" fill="#9CA3AF">Misconfiguration scanning · az CLI + Terraform remediation blocks</text>
+
+  <!-- Bottom tags -->
+  <rect x="60" y="530" width="60" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="90" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">CIS</text>
+
+  <rect x="135" y="530" width="80" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="175" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">Terraform</text>
+
+  <rect x="230" y="530" width="60" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="260" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">IAM</text>
+
+  <rect x="305" y="530" width="100" height="28" rx="14" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="355" y="549" font-family="monospace" font-size="12" fill="#FCA5A5" text-anchor="middle">Read-Only</text>
+</svg>

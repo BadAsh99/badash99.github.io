@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E1A"/>
+      <stop offset="100%" style="stop-color:#1A0A0A"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EF4444" stroke-width="0.3" opacity="0.12"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent bar — red for this week's theme -->
+  <rect x="0" y="0" width="1200" height="6" fill="#EF4444"/>
+
+  <!-- Week label -->
+  <rect x="60" y="60" width="120" height="36" rx="18" fill="#450A0A" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="120" y="84" font-family="monospace" font-size="14" font-weight="bold" fill="#FCA5A5" text-anchor="middle">WEEK 02</text>
+
+  <!-- Series name -->
+  <text x="60" y="200" font-family="monospace" font-size="18" fill="#EF4444" letter-spacing="6">#BADASHWEDNESDAYS</text>
+
+  <!-- Title -->
+  <text x="60" y="278" font-family="monospace" font-size="38" font-weight="bold" fill="#F9FAFB">"Deny All" Isn't Security.</text>
+  <text x="60" y="340" font-family="monospace" font-size="38" font-weight="bold" fill="#EF4444">It's Wishful Thinking.</text>
+  <text x="60" y="400" font-family="monospace" font-size="20" fill="#9CA3AF">Governed AI enablement via Prisma AIRS</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="430" x2="500" y2="430" stroke="#1F2937" stroke-width="1"/>
+
+  <!-- Author -->
+  <text x="60" y="468" font-family="monospace" font-size="15" fill="#6B7280">Ash Clements · Palo Alto Networks · #BadAshWednesdays</text>
+
+  <!-- BA99 badge -->
+  <polygon points="1080,80 1150,120 1150,200 1080,240 1010,200 1010,120" fill="#1A0A0A" stroke="#EF4444" stroke-width="2"/>
+  <text x="1080" y="155" font-family="monospace" font-size="22" font-weight="bold" fill="#EF4444" text-anchor="middle">BA</text>
+  <text x="1080" y="185" font-family="monospace" font-size="22" font-weight="bold" fill="#EF4444" text-anchor="middle">99</text>
+
+  <!-- Bottom tags -->
+  <rect x="60" y="540" width="60" height="26" rx="13" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="90" y="558" font-family="monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">AIRS</text>
+  <rect x="135" y="540" width="130" height="26" rx="13" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="200" y="558" font-family="monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">Prisma Access</text>
+  <rect x="280" y="540" width="110" height="26" rx="13" fill="#450A0A" stroke="#EF4444" stroke-width="1"/>
+  <text x="335" y="558" font-family="monospace" font-size="11" fill="#FCA5A5" text-anchor="middle">AI Red Teaming</text>
+  <rect x="405" y="540" width="70" height="26" rx="13" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="440" y="558" font-family="monospace" font-size="11" fill="#93C5FD" text-anchor="middle">SASE</text>
+</svg>

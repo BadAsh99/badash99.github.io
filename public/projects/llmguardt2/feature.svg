@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E1A"/>
+      <stop offset="100%" style="stop-color:#0D1B3E"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3B82F6" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Left electric-blue accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="#3B82F6"/>
+
+  <!-- Corner brackets -->
+  <path d="M 60 40 L 60 60 L 40 60" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M 1140 590 L 1140 570 L 1160 570" fill="none" stroke="#3B82F6" stroke-width="2"/>
+
+  <!-- BA99 badge -->
+  <polygon points="1100,50 1150,75 1150,125 1100,150 1050,125 1050,75" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="1100" y="97" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">BA</text>
+  <text x="1100" y="117" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">99</text>
+
+  <!-- Scanning animation lines (static) -->
+  <line x1="900" y1="200" x2="1020" y2="200" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>
+  <line x1="900" y1="220" x2="980" y2="220" stroke="#3B82F6" stroke-width="1" opacity="0.3"/>
+  <line x1="900" y1="240" x2="1000" y2="240" stroke="#3B82F6" stroke-width="1" opacity="0.2"/>
+  <line x1="900" y1="260" x2="960" y2="260" stroke="#EF4444" stroke-width="1" opacity="0.6"/>
+  <line x1="900" y1="280" x2="1010" y2="280" stroke="#3B82F6" stroke-width="1" opacity="0.3"/>
+
+  <text x="905" y="195" font-family="monospace" font-size="10" fill="#9CA3AF" opacity="0.6">SCANNING...</text>
+  <text x="905" y="258" font-family="monospace" font-size="10" fill="#EF4444" opacity="0.8">VULNERABLE</text>
+
+  <!-- Category label -->
+  <text x="60" y="220" font-family="monospace" font-size="14" fill="#3B82F6" letter-spacing="4">LLM VULNERABILITY SCANNER · OWASP LLM TOP 10</text>
+
+  <!-- Title -->
+  <text x="60" y="300" font-family="monospace" font-size="56" font-weight="bold" fill="#F9FAFB">LLMGuard</text>
+  <text x="60" y="370" font-family="monospace" font-size="56" font-weight="bold" fill="#3B82F6">T2</text>
+
+  <!-- Descriptor -->
+  <text x="60" y="430" font-family="monospace" font-size="18" fill="#9CA3AF">Semantic detection · Claude + GPT-4 · Catches what pattern matchers miss</text>
+
+  <!-- Bottom tags -->
+  <rect x="60" y="530" width="80" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="100" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">OWASP</text>
+
+  <rect x="155" y="530" width="150" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="230" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">Semantic Detection</text>
+
+  <rect x="320" y="530" width="100" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="370" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">GCP Cloud Run</text>
+
+  <rect x="435" y="530" width="70" height="28" rx="14" fill="#1E3A5F" stroke="#3B82F6" stroke-width="1"/>
+  <text x="470" y="549" font-family="monospace" font-size="12" fill="#93C5FD" text-anchor="middle">Docker</text>
+</svg>

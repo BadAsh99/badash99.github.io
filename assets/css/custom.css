@@ -12,6 +12,13 @@
   background-color: #111827 !important; /* Carbon surface */
 }
 
+/* ── CARD THUMBNAILS — anchor left so titles don't get cropped ── */
+.thumbnail_card img,
+.thumbnail_card_related img,
+.thumbnail img {
+  object-position: left center;
+}
+
 /* ── CARDS ── */
 .dark article,
 .dark .card {

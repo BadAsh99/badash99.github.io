@@ -20,9 +20,9 @@
   <path d="M 1140 590 L 1140 570 L 1160 570" fill="none" stroke="#3B82F6" stroke-width="2"/>
 
   <!-- BA99 badge -->
-  <polygon points="1100,50 1150,75 1150,125 1100,150 1050,125 1050,75" fill="none" stroke="#3B82F6" stroke-width="2"/>
-  <text x="1100" y="97" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">BA</text>
-  <text x="1100" y="117" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">99</text>
+  <polygon points="870,50 920,75 920,125 870,150 820,125 820,75" fill="none" stroke="#3B82F6" stroke-width="2"/>
+  <text x="870" y="97" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">BA</text>
+  <text x="870" y="117" font-family="monospace" font-size="16" font-weight="bold" fill="#3B82F6" text-anchor="middle">99</text>
 
   <!-- Scanning animation lines (static) -->
   <line x1="900" y1="200" x2="1020" y2="200" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>

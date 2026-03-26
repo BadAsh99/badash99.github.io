@@ -6,6 +6,8 @@ weight: 2
 featured: true
 externalUrl: "https://github.com/BadAsh99/llmguardt2"
 showDate: false
+imagePosition: "left center"
+imagePositionFeature: "left center"
 ---
 
 Traditional LLM security scanners are pattern-blind. Attackers who know your patterns simply rephrase their payloads. LLMGuardT2 detects attacks by *meaning*, not literal text.

@@ -6,6 +6,8 @@ weight: 1
 featured: true
 externalUrl: "https://github.com/BadAsh99/badash-killchain"
 showDate: false
+imagePosition: "left center"
+imagePositionFeature: "left center"
 ---
 
 Prisma AIRS gives you the enforcement plane. This is the work beneath it.

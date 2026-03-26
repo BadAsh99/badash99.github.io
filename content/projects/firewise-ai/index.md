@@ -5,6 +5,8 @@ tags: ["PAN-OS", "Palo Alto Networks", "GenAI", "Streamlit", "Security Audit"]
 weight: 4
 externalUrl: "https://github.com/BadAsh99/firewise-ai"
 showDate: false
+imagePosition: "left center"
+imagePositionFeature: "left center"
 ---
 
 Upload a PAN-OS XML firewall config. Ask natural language questions about your security posture. Get AI-generated analysis backed by real configuration context — without parsing thousands of lines of XML manually.

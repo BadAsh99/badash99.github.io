@@ -6,6 +6,8 @@ weight: 3
 featured: true
 externalUrl: "https://github.com/BadAsh99/cloudguard"
 showDate: false
+imagePosition: "left center"
+imagePositionFeature: "left center"
 ---
 
 Read-only cloud misconfiguration scanner that checks Azure (AWS/GCP in progress) against CIS Benchmarks and OWASP Cloud Top 10 — and returns copy-paste `az` CLI commands and Terraform blocks to fix every finding.

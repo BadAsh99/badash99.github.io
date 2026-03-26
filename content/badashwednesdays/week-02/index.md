@@ -4,6 +4,8 @@ date: 2026-03-25
 description: "Blocking LLMs at the perimeter isn't AI governance. Here's what runtime enforcement actually looks like."
 tags: ["AIRS", "Prisma Access", "LLM Security", "AI Red Teaming", "PAN-OS"]
 draft: false
+imagePosition: "left center"
+imagePositionFeature: "left center"
 ---
 
 **BLUF:** Blocking LLMs at the perimeter and calling it AI governance is the security equivalent of a "No Trespassing" sign on a glass door. Your users are already inside. The question is whether you have visibility.
